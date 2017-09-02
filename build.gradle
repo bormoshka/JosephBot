@@ -1,0 +1,33 @@
+plugins {
+    id 'org.springframework.boot' version "1.5.6.RELEASE"
+}
+group 'ru.ulmc.telegram'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: "org.springframework.boot"
+
+sourceCompatibility = 1.8
+
+ext {
+    feignVer = "9.5.1"
+    bootVer = "1.5.6.RELEASE"
+    cloudVer = "1.2.5.RELEASE"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter:$bootVer")
+  //  compile "org.springframework.cloud:spring-cloud-starter-feign:$cloudVer"
+    compile 'com.github.pengrad:java-telegram-bot-api:3.3.0'
+    compile "org.projectlombok:lombok:1.16.16"
+  //  compile "io.github.openfeign:feign-core:$feignVer"
+  //  compile "io.github.openfeign:feign-okhttp:$feignVer"
+  //  compile "io.github.openfeign:feign-gson:$feignVer"
+  //  compile "io.github.openfeign:feign-slf4j:$feignVer"
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

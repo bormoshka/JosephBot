@@ -1,0 +1,15 @@
+bot:
+  stickers:
+    fromOneUserAtOnce: 1
+    atRow: 3
+    fromUserPerMinute: 10
+    maxStrikersAtRow: 10
+
+
+spring:
+  application:
+    name: JanitorBot
+logging:
+  level:
+     org.springframework.web: ERROR
+     ru.ulmc: DEBUG

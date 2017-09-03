@@ -1,7 +1,5 @@
 package ru.ulmc.telegram.core.service;
 
-import com.pengrad.telegrambot.model.Chat;
-import com.pengrad.telegrambot.model.Message;
 import lombok.Getter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

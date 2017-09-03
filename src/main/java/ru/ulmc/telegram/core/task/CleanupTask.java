@@ -77,7 +77,7 @@ public class CleanupTask {
                     cleanSet.add(msg);
                     return;
                 }
-                if ((msg.messageId() - basket.getLastMsgId() == 1 || basket.getLastMsgId() == Integer.MIN_VALUE) && msg.isSticker()) {
+                if (msg.isSticker()) {
                     basket.setLastMsgId(msg.messageId());
                     basket.getMessagesToDelete().add(msg);
                 } else {

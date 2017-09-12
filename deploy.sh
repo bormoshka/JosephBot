@@ -20,8 +20,8 @@ configFolder=resources
 ##### DONT CHANGE HERE ##############
 #jar file
 # $WORKSPACE is a jenkins var
-sourFile=$WORKSPACE/api/build/libs/$projectName*.war
-destFile=$destAbsPath/$projectName.war
+sourFile=$WORKSPACE/api/build/libs/$projectName*.jar
+destFile=$destAbsPath/$projectName.jar
 
 #config files folder
 sourConfigFolder=$WORKSPACE/$configFolder*

@@ -51,11 +51,11 @@ function deleteFiles(){
     echo "Deleting $destFile"
     rm -rf $destFile
 
-    echo "Deleting $destConfigFolder"
-    rm -rf $destConfigFolder
+   # echo "Deleting $destConfigFolder"
+   # rm -rf $destConfigFolder
 
-    echo "Deleting $dstLogFile"
-    rm -rf $dstLogFile
+  #  echo "Deleting $dstLogFile"
+  #  rm -rf $dstLogFile
 
     echo " "
 }

@@ -8,7 +8,7 @@ serverPort=$1
 projectName=$2 #spring-boot
 # FOURTH ARGUMENT external config file name
 # Ex: application-localhost.yml
-configFile=$3
+extraParams=$3
 
 
 #### CONFIGURABLE VARIABLES ######
@@ -27,7 +27,7 @@ destFile=$destAbsPath/$projectName.jar
 sourConfigFolder=$WORKSPACE/$configFolder*
 destConfigFolder=$destAbsPath/$configFolder
 
-properties=--spring.config.location=$destAbsPath/$configFolder/$configFile
+
 
 #CONSTANTS
 logFile=server.log
@@ -72,11 +72,11 @@ function copyFiles(){
 
 function run(){
 
-   #echo "java -jar $destFile --server.port=$serverPort $properties" | at now + 1 minutes
+   #echo "java -jar $destFile --server.port=$serverPort $extraParams" | at now + 1 minutes
 
-   nohup nice java -jar $destFile --server.port=$serverPort $properties $> $dstLogFile 2>&1 &
+   nohup nice java -jar $destFile --server.port=$serverPort $extraParams $> $dstLogFile 2>&1 &
 
-   echo "COMMAND: nohup nice java -jar $destFile --server.port=$serverPort $properties $> $dstLogFile 2>&1 &"
+   echo "COMMAND: nohup nice java -jar $destFile --server.port=$serverPort $extraParams $> $dstLogFile 2>&1 &"
 
     echo " "
 }

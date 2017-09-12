@@ -2,7 +2,7 @@ plugins {
     id 'org.springframework.boot' version "1.5.6.RELEASE"
 }
 group 'ru.ulmc.telegram'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 apply plugin: 'java'
 apply plugin: "org.springframework.boot"
@@ -13,6 +13,12 @@ ext {
     feignVer = "9.5.1"
     bootVer = "1.5.6.RELEASE"
     cloudVer = "1.2.5.RELEASE"
+}
+
+bootRepackage {
+    mainClass = 'ru.ulmc.telegram.JosephBot'
+    executable = true
+
 }
 
 repositories {

@@ -8,7 +8,7 @@ bot:
 
 spring:
   application:
-    name: JanitorBot
+    name: JosephBot
 logging:
   level:
      org.springframework.web: ERROR

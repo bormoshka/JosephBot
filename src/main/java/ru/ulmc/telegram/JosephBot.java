@@ -12,9 +12,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableAutoConfiguration
 @EnableAsync
 @EnableScheduling
-public class JanitorApp {
+public class JosephBot {
     public static void main(String[] args) {
-        SpringApplication.run(JanitorApp.class, args);
+        SpringApplication.run(JosephBot.class, args);
     }
 }
 
